@@ -46,10 +46,29 @@ public class Inputs {
     }
 
     private static double calculateTax(double gross, double nz) {
-        double tax = 0.0;
-        if (gross > 6000) {
-            tax = (gross - 6000) * 0.35;
+        if (gross < 0) {
+            return 0;
         }
+        if (nz < 0) {
+            return 0;
+        }
+
+        final double NZ_RATIO = 242.0;
+        final double[] STEPS = new double[]{0, 7_010, 10_060, 16_150, 22_440, 46_690, 60_130};
+        final double[] RATES = new double[]{0.1, 0.14, 0.20, 0.31, 0.35, 0.47, 0.5};
+        double tax = 0;
+
+        for (int i = STEPS.length - 1; i > 0; i--) {
+            if (gross > STEPS[i]) {
+                tax += (gross - STEPS[i]) * RATES[i];
+                gross = STEPS[i];
+            }
+        }
+        tax += gross * RATES[0];
+
+        double nzSum = nz * NZ_RATIO;
+        tax = Math.max(0, tax - nzSum);
+
         return tax;
     }
 

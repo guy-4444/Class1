@@ -1,12 +1,8 @@
 public class Main {
 
     public static void main(String[] args) {
-        Inputs.salaryCalculator();
-
-
-
-
-
+        // while - random.
+        GPA.start();
 
 
     }
