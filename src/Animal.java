@@ -1,3 +1,5 @@
+import objects.Date;
+
 public class Animal {
 
     private int type;
@@ -5,6 +7,7 @@ public class Animal {
     private String[] desc;
     private boolean isKosher;
     private double weight;
+    private Date date;
 
     public Animal(int type, String name) {
         this.type = type;
@@ -46,6 +49,13 @@ public class Animal {
         this.weight = weight;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
 
     @Override
     public String toString() {
