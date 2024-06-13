@@ -16,10 +16,10 @@ public class Order {
         this.address = another.address;
         this.date = new Date(another.date);
 
-
         products = new Product[0];
         for (int i = 0; i < another.productsSize; i++) {
-            addProduct(another.products[i]);
+            Product copy = new Product(another.products[i]);
+            addProduct(copy);
         }
     }
 
@@ -43,9 +43,9 @@ public class Order {
     public void addProduct(Product product) {
         validateProductsArray();
 
-        Product temp = new Product(product);
+        Product copy = new Product(product);
 
-        products[productsSize] = temp;
+        products[productsSize] = copy;
         productsSize++;
     }
 
@@ -97,6 +97,18 @@ public class Order {
         }
 
         return sum;
+    }
+
+    public void applyCoupon(int productIndex, int coupon) {
+        if (coupon < 0 || coupon > 100) {
+            return;
+        }
+
+        if (productIndex < 0 || productIndex >= productsSize) {
+            return;
+        }
+
+        products[productIndex].setCoupon(coupon);
     }
 
     @Override

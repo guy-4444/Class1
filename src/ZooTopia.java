@@ -33,6 +33,19 @@ public class ZooTopia {
         }
 
 
+        Animal simba = new Animal(10, "Lion");
+        simba.setWeight(300);
+        simba.setKosher(false);
+        simba.setDate(new Date(06, 06, 2024));
+
+        Animal scar = new Animal(simba);
+        scar.setWeight(400);
+        scar.getDate().setM(01);
+
+        System.out.println(simba);
+
+        System.out.println(scar);
+
     }
 
 }

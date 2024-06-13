@@ -9,6 +9,14 @@ public class Animal {
     private double weight;
     private Date date;
 
+    public Animal(Animal other) {
+        this.type = other.type;
+        this.name = other.name;
+        this.isKosher = other.isKosher;
+        this.weight = other.weight;
+        this.date = new Date(other.date);
+    }
+
     public Animal(int type, String name) {
         this.type = type;
         this.name = name;
@@ -59,6 +67,6 @@ public class Animal {
 
     @Override
     public String toString() {
-        return name + " - Average Weight: " + weight + " ,Kosher: " + isKosher;
+        return name + " - Average Weight: " + weight + " ,Kosher: " + isKosher + " ,Date: " + date;
     }
 }

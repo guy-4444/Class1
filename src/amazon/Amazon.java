@@ -8,6 +8,7 @@ public class Amazon {
 
         Product p1 = new Product("Playstation", 1000);
         Product p2 = new Product("Gameboy", 200, 20);
+        Product p3 = new Product("PC", 2000, 10);
 
 
 
@@ -18,12 +19,11 @@ public class Amazon {
 
 
 
-        Product p3 = new Product("PC", 2000, 10);
         Order order2 = new Order("Bnei Efraim 202");
         order2.setDate(new Date(30, 06, 2024));
         order2.addProduct(p1);
         order2.addProduct(p3);
-        p1.setCoupon(30);
+        order2.applyCoupon(0, 30);
 
 
         System.out.println(order1);
