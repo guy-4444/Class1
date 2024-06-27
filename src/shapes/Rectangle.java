@@ -43,4 +43,17 @@ public class Rectangle extends Shape {
                 ", height=" + height +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Rectangle)) {
+            return false;
+        }
+
+        Rectangle otherRectangle = (Rectangle) other;
+
+        return super.equals(otherRectangle)
+                && height == otherRectangle.height
+                && width == otherRectangle.width;
+    }
 }

@@ -62,5 +62,13 @@ public class Point {
         return Math.sqrt( Math.pow(p2.x - p1.x, 2) + Math.pow(p2.y - p1.y, 2) );
     }
 
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Point)) {
+            return false;
+        }
 
+        Point otherPoint = (Point) other;
+        return (x == otherPoint.x  &&  y == otherPoint.y  &&  color == otherPoint.color);
+    }
 }

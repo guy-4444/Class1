@@ -24,4 +24,14 @@ public abstract class Shape {
                 "position=" + position +
                 '}';
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Shape)) {
+            return false;
+        }
+
+        Shape otherShape = (Shape) other;
+        return position.equals(otherShape.position);
+    }
 }

@@ -9,4 +9,10 @@ public abstract class Series {
     }
 
     public abstract int getElement();
+
+    public String toString() {
+        return "Series{" +
+                "index=" + index +
+                '}';
+    }
 }

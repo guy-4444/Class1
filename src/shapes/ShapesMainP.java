@@ -34,6 +34,20 @@ public class ShapesMainP {
         for (Shape shape : shapes) {
             shape.getPerimeter();
         }
+
+
+        Circle c10 = new Circle(p, 5);
+        Circle c11 = new Circle(p, 5);
+
+        int x = 9;
+        int y = 9;
+
+        String s1 = "Guy;";
+        String s2 = "Guy;";
+        System.out.println(s1.equals(s2));
+        System.out.println(c10.equals(c11));
+
+
     }
 
 }

@@ -33,4 +33,15 @@ public class Circle extends Shape {
         return "" + super.toString() +
                 ", radius=" + radius;
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Circle)) {
+            return false;
+        }
+
+        Circle otherCircle = (Circle) other;
+
+        return super.equals(otherCircle) && (radius == otherCircle.radius);
+    }
 }

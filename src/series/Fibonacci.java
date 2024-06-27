@@ -2,8 +2,6 @@ package series;
 
 public class Fibonacci extends Series {
 
-
-
     public Fibonacci(int index) {
         super(index);
     }

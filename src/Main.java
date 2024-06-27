@@ -1,4 +1,6 @@
 import amazon.Amazon;
+import exceptions.ExceptionGameMain;
+import exceptions.ExceptionMain;
 import series.MainSeries;
 import shapes.ShapesMain;
 import shapes.ShapesMainP;
@@ -10,7 +12,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        MainSeries.start();
+        ExceptionGameMain.start();
 
 
     }

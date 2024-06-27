@@ -10,4 +10,13 @@ public class Square extends Rectangle {
     public String toString() {
         return super.toString() + ", [Square]";
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (!(other instanceof Square)) {
+            return false;
+        }
+
+        return super.equals(other);
+    }
 }
