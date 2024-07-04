@@ -1,6 +1,6 @@
 import objects.Date;
 
-public class Animal {
+public class AnimalModel {
 
     private int type;
     private String name;
@@ -9,7 +9,7 @@ public class Animal {
     private double weight;
     private Date date;
 
-    public Animal(Animal other) {
+    public AnimalModel(AnimalModel other) {
         this.type = other.type;
         this.name = other.name;
         this.isKosher = other.isKosher;
@@ -17,12 +17,12 @@ public class Animal {
         this.date = new Date(other.date);
     }
 
-    public Animal(int type, String name) {
+    public AnimalModel(int type, String name) {
         this.type = type;
         this.name = name;
     }
 
-    public Animal(int type, String name, double weight, boolean isKosher) {
+    public AnimalModel(int type, String name, double weight, boolean isKosher) {
         this.type = type;
         this.name = name;
         this.isKosher = isKosher;

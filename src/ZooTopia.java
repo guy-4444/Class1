@@ -11,34 +11,34 @@ public class ZooTopia {
         Date date2 = new Date(01, 01, 700);
 
 
-        Animal a1 = new Animal(10, "Lion");
+        AnimalModel a1 = new AnimalModel(10, "Lion");
         a1.setWeight(400);
         a1.setKosher(false);
         a1.setDate(new Date(01, 01, 400));
 
-        Animal a2 = new Animal(20, "Giraffe", 700, true);
+        AnimalModel a2 = new AnimalModel(20, "Giraffe", 700, true);
         a2.setDate(new Date(01, 01, 600));
 
-        Animal a3 = new Animal(20, "Giraffe", 700, true);
+        AnimalModel a3 = new AnimalModel(20, "Giraffe", 700, true);
         a3.setDate(new Date(01, 01, 500));
         a3.setWeight(800);
 
 
-        Animal[] animals = new Animal[] {a1, a2, a3};
+        AnimalModel[] animals = new AnimalModel[] {a1, a2, a3};
 
         for (int i = 0; i < animals.length; i++) {
-            Animal a = animals[i];
+            AnimalModel a = animals[i];
             System.out.println((i+1) + ". " + a.toString());
 
         }
 
 
-        Animal simba = new Animal(10, "Lion");
+        AnimalModel simba = new AnimalModel(10, "Lion");
         simba.setWeight(300);
         simba.setKosher(false);
         simba.setDate(new Date(06, 06, 2024));
 
-        Animal scar = new Animal(simba);
+        AnimalModel scar = new AnimalModel(simba);
         scar.setWeight(400);
         scar.getDate().setM(01);
 
